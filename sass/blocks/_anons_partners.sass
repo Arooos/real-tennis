@@ -1,0 +1,76 @@
+.anons
+	display: block
+	min-height: 450px
+	background: rgba(0, 0, 0, 0.5)
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+	backdrop-filter: blur(10px)
+	border-radius: 20px
+	.nearest
+		padding: 20px 0 20px 0
+		&_title
+			color: $text_color
+			text-align: left
+			text-align: center
+		&_address
+			margin-top: 15px
+			font-weight: 400
+			font-size: 24px
+			line-height: 20px
+			color: $text_color
+			text-align: center
+		&_date
+			margin-top: 15px
+			font-weight: 700
+			font-size: 36px
+			line-height: 43px
+			color: $text_color
+			text-align: center
+		&_categories
+			margin-top: 15px
+			font-weight: 700
+			font-size: 40px
+			line-height: 40px
+			color: $second_color
+			text-align: center
+		&_data
+			margin-top: 15px
+			font-weight: 700
+			font-size: 32px
+			line-height: 32px
+			color: #ffffff
+			text-align: center
+			span
+				font-weight: 400
+		&_btn
+			display: flex
+			justify-content: space-between
+			margin-top: 32px
+			&_1
+				width: 150px
+				height: 50px
+				font-size: 20px
+			&_2
+				width: 150px
+				height: 50px
+				font-size: 20px
+				background: $second_color
+				&:hover
+					background: #a57d07
+					transition: 0.2s all 
+				&:focus
+					outline: none
+.partner
+	display: block
+	padding: 140px 0 20px 0
+	.list
+		.col-md-3, .col-6
+			display: flex
+			justify-content: center
+			align-items: center
+		.partner_link
+			display: flex
+			justify-content: center
+			&_icons
+				margin-top: 25px
+				list-style-type: none
+				width: 60%
