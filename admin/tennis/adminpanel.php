@@ -23,28 +23,6 @@
             <span class="input-group-text" id="basic-addon1">Название турнира (шапка)</span>
             <input class="form-control" name="name_of_tour"  type="name_of_tour" method="post" required>
         </div>
-        <!-- выбор категории -->
-        <div style="margin: 0 auto;max-width: 600px;" class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Категория</label>    
-            <select  name="categories" id="" class="form-select" method="post">
-                <?php
-                $sth = $db->prepare("SELECT * FROM `categories`");
-                $sth->execute(array());
-                $cat_va = $sth->fetchAll(PDO::FETCH_ASSOC);
-                foreach($cat_va as $cat_v){?>
-                <option>
-                    <?php
-                        $opt = $db->prepare("SELECT `name` FROM `categories` WHERE id=$cat_v[id]");
-                        $opt->execute(array());
-                        $value = $opt->fetch(PDO::FETCH_COLUMN);
-                        echo $value;
-                    ?>
-                </option>
-                <?php
-                }
-                ?>
-            </select>
-        </div>
         <!-- выбор места проведения -->
         <div class="input-group mb-3">
             <label class="input-group-text" for="inputGroupSelect01">Место</label>
@@ -94,37 +72,10 @@
             <span class="input-group-text" id="basic-addon1">Дата</span>
             <input class="form-control" name="data" type="date" method="post" required>
         </div>
-        <!-- время начала -->
+        <!-- ввод категорий -->
         <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Время начала</span>
-            <input class="form-control" name="time" type="time" method="post" required>
-        </div>
-        <!-- взнос за участие -->
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Взнос</span>
-            <input class="form-control" name="price"  type="price" method="post" required>
-        </div>
-        <!-- выбор уровня игрока -->
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Уровень допуска игрока</span>
-            <select name="class" class="form-select" method="post">
-                <?php 
-                $sth = $db->prepare("SELECT * FROM `class`");
-                $sth->execute(array());
-                $cat_va = $sth->fetchAll(PDO::FETCH_ASSOC);
-                foreach($cat_va as $cat_v){?>
-                <option>
-                    <?php
-                        $class = $db->prepare("SELECT `name` FROM `class` WHERE id=$cat_v[id]");
-                        $class->execute(array());
-                        $value = $class->fetch(PDO::FETCH_COLUMN);
-                        echo $value;
-                    ?>
-                </option>
-                <?php
-                }
-                ?>
-            </select>
+            <span class="input-group-text" id="basic-addon1">Категории турнира (кратко)</span>
+            <input class="form-control" name="categories" method="post" required>
         </div>
         <!-- выбор организатора -->
         <div class="input-group mb-3">
@@ -138,28 +89,6 @@
                 <option>
                     <?php
                         $organizer = $db->prepare("SELECT `name` FROM `organizer` WHERE id=$cat_v[id]");
-                        $organizer->execute(array());
-                        $value = $organizer->fetch(PDO::FETCH_COLUMN);
-                        echo $value;
-                    ?>
-                </option>
-                <?php
-                    }
-                ?>
-            </select>
-        </div>
-
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">Год</label>
-            <select name="year" class="form-select" method="post">
-                <?php 
-                $sth = $db->prepare("SELECT * FROM `years`");
-                $sth->execute(array());
-                $cat_va = $sth->fetchAll(PDO::FETCH_ASSOC);
-                foreach($cat_va as $cat_v){?>
-                <option>
-                    <?php
-                        $organizer = $db->prepare("SELECT `year` FROM `years` WHERE id=$cat_v[id]");
                         $organizer->execute(array());
                         $value = $organizer->fetch(PDO::FETCH_COLUMN);
                         echo $value;

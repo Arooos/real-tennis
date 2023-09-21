@@ -1,7 +1,7 @@
 <?php
     require "app/connection/tennis_cnf.php";
 ?>
-<h2>hjhkhkhk</h2>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1243,22 +1243,22 @@
                         <div class="row">
                             <div class="col-md-3 col-6">
                                 <a class="partner_link" href="#">
-                                    <img class="partner_link_icons" src="img/partners/port_artyr.png" alt="">
+                                    <img class="partner_link_icons" src="img/tennis/partners/port_artyr.png" alt="">
                                 </a>
                             </div>
                             <div class="col-md-3 col-6">
                                 <a class="partner_link" href="#">
-                                    <img class="partner_link_icons" src="img/partners/EA.png" alt="">
+                                    <img class="partner_link_icons" src="img/tennis/partners/EA.png" alt="">
                                 </a>
                             </div>
                             <div class="col-md-3 col-6">
                                 <a class="partner_link" href="#">
-                                    <img class="partner_link_icons" src="img/partners/dae.svg" alt="">
+                                    <img class="partner_link_icons" src="img/tennis/partners/dae.svg" alt="">
                                 </a>
                             </div>
                             <div class="col-md-3 col-6">
                                 <a class="partner_link" href="#">
-                                    <img class="partner_link_icons" src="img/partners/chistayaline.png" alt="">
+                                    <img class="partner_link_icons" src="img/tennis/partners/chistayaline.png" alt="">
                                 </a>
                             </div>
                         </div>   
